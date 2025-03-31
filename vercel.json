@@ -1,0 +1,19 @@
+{
+	"version": 2,
+	"builds": [
+	  {
+		"src": "app/main.py",
+		"use": "@vercel/python"
+	  }
+	],
+	"env": {
+	  "AIPROXY_TOKEN": "@AIPROXY_TOKEN"
+	},
+	"routes": [
+	  {
+		"src": "/(.*)",
+		"dest": "app/main.py"
+	  }
+	]
+  }
+  
